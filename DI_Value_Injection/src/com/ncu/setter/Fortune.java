@@ -1,0 +1,7 @@
+package com.ncu.setter;
+
+public class Fortune implements IFortune{
+public String getFortune() {
+	return "you have a good fortune today";
+}
+}

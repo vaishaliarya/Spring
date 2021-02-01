@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	    
+      
+    <!-- Define your beans here -->
+ 	
+   	
+   	<!-- Object creation of Cricket class-->
+   	<bean id="ccoach" class="com.ncu.setter.CricketCoach">
+   	<property name="ifortune" ref="fortune"/>
+   	<property name="name" value="Vaishali"/>
+   	<property name="email" value="vishalikalra@ncuindia.edu"/>
+   	
+   	<property name="team_name" value="IPL_Banglore"/>
+   	<property name="add" ref="address"></property>
+   	</bean>
+   	
+   	
+   	<!-- setter injection -->
+ 	<!-- <bean id="myCCoach"
+ 		class="com.ncu.SI.CricketCoach">
+ 		<property name="ifortune" ref="fortune"/>
+   	</bean>-->
+  	<!-- Injected beans definition here -->
+  	
+  	<bean id="fortune"
+ 		class="com.ncu.setter.Fortune">	
+ 		
+  	</bean>
+  	
+  	<bean id="address" class="com.ncu.setter.Address">
+  	<property name="city" value="Gurgaon"/>
+  	<property name="house_no" value="461/7"/>
+  	<property name="state" value="Gurgaon"/>
+  	<property name="pincode" value="121102"/>
+  	
+ 
+  	
+  	</bean>
+  	
+  
+  	
+    
+</beans>
