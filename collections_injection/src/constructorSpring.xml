@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	    
+    <!-- define the dependency -->
+    
+    <bean id="customer" class="collections_injection.Customer">
+    <constructor-arg name="names">
+    <list>
+    <value>abc</value>
+    <value>xyz</value>
+    <value>def</value>
+    </list>
+    </constructor-arg>
+    
+    <constructor-arg name="Phno">
+    <set>
+    <value>123456789</value>
+    <value>2345656789</value>
+    <value>7896789</value>
+    </set>
+    </constructor-arg>
+    
+    <constructor-arg name="aadharNo">
+ 	<map> 
+	<entry key="123456789" value="abc"/>
+ 	<entry key="2345656789" value="xyz"/>
+ 	<entry key="7896789" value="def"/>
+	</map> 
+	</constructor-arg>
+    
+    
+    
+    
+    
+    
+    </bean>
+  	
+  
+  	
+    
+</beans>

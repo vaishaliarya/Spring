@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	    
+    <!-- Constructor Injection -->
+    
+    <bean id="customer" class="collections_injection.Customer">
+    <property name="names">
+    <list>
+    <value>abc</value>
+    <value>xyz</value>
+    <value>def</value>
+    </list>
+    </property>
+    
+    <property name="Phno">
+    <set>
+    <value>123456789</value>
+    <value>2345656789</value>
+    <value>7896789</value>
+    </set>
+    </property>
+    
+    <property name="aadharNo">
+ 	<map> 
+	<entry key="123456789" value="abc"/>
+ 	<entry key="2345656789" value="xyz"/>
+ 	<entry key="7896789" value="address"/>
+	</map> 
+	</property> 
+	
+	<property name="email">
+ 	<props> 
+	<prop key="123456789" >arya.vaishali17@gmail.com</prop>
+ 	<prop key="2345656789" >123</prop>
+ 	<prop key="7896789" >arya.vaishali17@gmail.com</prop>
+	</props> 
+	</property> 
+    
+    
+    <property name="address">
+ 	<map> 
+	<entry key="123456789" value-ref="address"/>
+ 	
+	</map> 
+	</property> 
+    
+    
+    
+    </bean>
+  	
+  
+  	<bean id="address" class="collections_injection.Address">
+  	<property name="city" value="Gurgaon"/>
+  	<property name="house_no" value="461/7"/>
+  	<property name="state" value="Gurgaon"/>
+  	<property name="pincode" value="121102"/>
+  	</bean>
+    
+</beans>
