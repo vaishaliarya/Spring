@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	 
+    <!-- by constructor autowiring -->
+    
+    <bean id="driver_name" class="com.ncu.ConstructorbyType.Driver" autowire="constructor">
+    <property name="Driver_name" value="XYZ">
+    </property>
+    </bean>
+    
+    <bean id="license" class="com.ncu.ConstructorbyType.License" >
+    <property name="names" value="4-wheeler"/>
+    </bean>
+    <bean id="address" class="com.ncu.ConstructorbyType.Address" >
+    <property name="H_No" value="23-A"/>
+    <property name="city" value=""/>
+    
+    
+  	
+  	</bean>
+  	</beans>
