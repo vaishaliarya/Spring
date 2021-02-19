@@ -1,19 +1,24 @@
-package com.ncu.annotationDemo.IOCAnnotation;
+package Value_property;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import com.ncu.annotationDemo.IOCAnnotation.Coach;
-import com.ncu.annotationDemo.IOCAnnotation.IFortune;
+import Value_property.Coach;
+import Value_property.IFortune;
 
 @Component("ccoach")//----this is your bean----object created for the bean<bean id="ccocach" class="fullyqualifiedname">
 public class CricketCoach implements Coach{
 
-	
-	private IFortune ifortune;//injection
+@Value("${name}")
+private String name;
+@Value("${email}")
+private String e_mail;
 
-//constructor Injection<bean id="ccocach" class="  " autowire="constructor">
+private IFortune ifortune;//injection
+
+
 @Autowired
 public CricketCoach(@Qualifier("restFortune")IFortune ifortune) {
 	this.ifortune=ifortune;
@@ -30,5 +35,12 @@ public String getDailyWorkout() {
 public String getDailyFortune() {
 	// TODO Auto-generated method stub
 	return ifortune.getFortune();
+}
+public String getE_mail() {
+	return e_mail;
+}
+
+public String getName() {
+	return name;
 }
 }
