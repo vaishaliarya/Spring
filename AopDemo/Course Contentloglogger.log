@@ -1,0 +1,6 @@
+2021-03-11 10:43:52 DEBUG LoggerAspect:25 - Going to start void com.ncu.LoggerDemo.AccountDemo.print()
+2021-03-11 10:43:52 DEBUG LoggerAspect:33 - Going to endtime void com.ncu.LoggerDemo.AccountDemo.print()
+2021-03-11 10:44:16 DEBUG LoggerAspect:25 - Going to start void com.ncu.LoggerDemo.AccountDemo.print()
+2021-03-11 10:44:16 DEBUG LoggerAspect:33 - Going to endtime void com.ncu.LoggerDemo.AccountDemo.print()
+2021-03-11 10:46:18 DEBUG LoggerAspect:25 - Going to start void com.ncu.LoggerDemo.AccountDemo.print()
+2021-03-11 10:46:18 DEBUG LoggerAspect:33 - Going to endtime void com.ncu.LoggerDemo.AccountDemo.print()

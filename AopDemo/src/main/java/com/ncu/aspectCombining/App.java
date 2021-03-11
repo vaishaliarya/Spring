@@ -1,10 +1,11 @@
-package com.ncu.AOP.AopDemo;
+package com.ncu.aspectCombining;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-
-
-
+/**
+ * Hello world!
+ *
+ */
 public class App 
 {
     public static void main( String[] args )
@@ -12,20 +13,20 @@ public class App
     	// read spring config java class
     			AnnotationConfigApplicationContext context =
     					new AnnotationConfigApplicationContext(DemoConfig.class);
-    			
+    			System.out.println("---before main call----");
     			// get the bean from spring container
     			AccountDao theAccountDao=context.getBean("accountDao",AccountDao.class);
-    			
+    	
     			// call the business method
-    			theAccountDao.addAccount();
-
-    			// do it again!
-    			System.out.println("\nlet's call it again!\n");
+    			theAccountDao.getAccountDao().setAccountName("vaishali");
     			
-    			// call the business method again
-    			theAccountDao.addAccount();
-    					
-    			// close the context
+    			//call the setter method
+//    			theAccountDao.setAccountName("vaishali");
+//    			theAccountDao.setAccountName("vaishali");
+//    			call the getter method
+    			System.out.println(theAccountDao.getAccountName());
+
+    			
     			context.close();
     }
 }
