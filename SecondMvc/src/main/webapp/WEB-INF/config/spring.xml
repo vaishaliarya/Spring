@@ -9,11 +9,14 @@
         http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
         <context:annotation-config></context:annotation-config>
         <context:component-scan base-package="com.ncu"></context:component-scan>
+       <!-- To add the resources-css,image,javascript this line you have to add in the code anywhere in the beans tag -->
+        <mvc:resources mapping="/resources/**" location="/resources/" />
+       
         <mvc:annotation-driven></mvc:annotation-driven>
         <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
-        
+       
        
         </bean>
         </beans>
